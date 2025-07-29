@@ -3,6 +3,11 @@ import Cleave from "cleave.js/react";
 import Button from "../../components/Button";
 import { Container, Form, Image } from "./styles";
 import ContactImage from "../../assets/contact-image.png";
+import { useState } from "react";
+import axios from "axios";
+import { sendContact } from "../../api/contactApi";
+import { useModal } from "../../context/ModalContext";
+import SuccessModal from "../../components/SuccessModal";
 
 type ContactFormData = {
   name: string;
@@ -11,6 +16,8 @@ type ContactFormData = {
 };
 
 export default function Contact() {
+const {showModal, openModal} = useModal();
+
   const {
     control,
     register,
@@ -19,9 +26,28 @@ export default function Contact() {
     reset,
   } = useForm<ContactFormData>();
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Dados enviados:", data);
-    reset();
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setErrorMessage(null); // limpa erro anterior
+      await sendContact({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+      });
+      openModal();
+      reset();
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        setErrorMessage(
+          error.response?.data?.message ||
+            "Erro ao enviar mensagem. Tente novamente."
+        );
+      } else {
+        setErrorMessage("Erro ao enviar mensagem. Tente novamente.");
+      }
+    }
   };
 
   return (
@@ -29,6 +55,14 @@ export default function Contact() {
       <Form>
         <h3>Fale conosco!</h3>
         <h2>Entrar em contato</h2>
+
+        {errorMessage && (
+          <div
+            style={{ color: "red", marginBottom: "1rem", fontWeight: "bold" }}
+          >
+            {errorMessage}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
@@ -84,6 +118,8 @@ export default function Contact() {
       <Image>
         <img src={ContactImage} alt="Entrar em contato" />
       </Image>
+
+      {showModal && <SuccessModal /> }
     </Container>
   );
 }
