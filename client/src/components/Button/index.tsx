@@ -2,14 +2,28 @@ import type { ReactNode } from "react";
 import { ButtonContainer } from "./styles";
 
 type ButtonProps = {
-    children: ReactNode;
-    fill?: boolean;
-    type?: "button" | "reset" | "submit";
-    onclick?: () => void;
+  children: ReactNode;
+  fill?: boolean;
+  type?: "button" | "reset" | "submit";
+  disabled?: boolean;
+  onclick?: () => void;
 };
 
-export default function Button({children, fill, type, onclick}: ButtonProps) {
-    return (
-        <ButtonContainer $fill={fill} type={type} onClick={onclick}>{children}</ButtonContainer>
-    );
+export default function Button({
+  children,
+  fill,
+  type,
+  disabled,
+  onclick,
+}: ButtonProps) {
+  return (
+    <ButtonContainer
+      $fill={fill}
+      type={type}
+      onClick={onclick}
+      disabled={disabled}
+    >
+      {children}
+    </ButtonContainer>
+  );
 }

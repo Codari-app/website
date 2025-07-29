@@ -15,4 +15,9 @@ export const ButtonContainer = styled.button<{ $fill?: boolean }>`
     opacity: 0.8;
     transition: 0.3s;
   }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: no-drop;
+  }
 `;

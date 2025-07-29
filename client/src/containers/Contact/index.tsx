@@ -16,7 +16,8 @@ type ContactFormData = {
 };
 
 export default function Contact() {
-const {showModal, openModal} = useModal();
+  const { showModal, openModal } = useModal();
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     control,
@@ -30,14 +31,20 @@ const {showModal, openModal} = useModal();
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      setErrorMessage(null); // limpa erro anterior
+      setErrorMessage(null);
+      setIsLoading(true);
       await sendContact({
         name: data.name,
         email: data.email,
         phone: data.phone,
       });
+      setIsLoading(false);
+      reset({
+        name: "",
+        email: "",
+        phone: "",
+      });
       openModal();
-      reset();
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         setErrorMessage(
@@ -109,7 +116,7 @@ const {showModal, openModal} = useModal();
           />
           {errors.phone && <span>{errors.phone.message}</span>}
 
-          <Button type="submit" fill>
+          <Button type="submit" fill disabled={isLoading ? true : undefined}>
             Enviar
           </Button>
         </form>
@@ -119,7 +126,7 @@ const {showModal, openModal} = useModal();
         <img src={ContactImage} alt="Entrar em contato" />
       </Image>
 
-      {showModal && <SuccessModal /> }
+      {showModal && <SuccessModal />}
     </Container>
   );
 }
