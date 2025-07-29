@@ -11,12 +11,12 @@ export default function Layout() {
     <>
       <div
         style={{
-          position: "fixed", // alterado de absolute para fixed
+          position: "fixed",
           top: 0,
           left: 0,
-          width: "100vw", // alterado para 100vw
+          width: "100vw",
           zIndex: 999,
-          boxSizing: "border-box", // garante que não ultrapasse a tela
+          boxSizing: "border-box",
         }}
       >
         <Header />

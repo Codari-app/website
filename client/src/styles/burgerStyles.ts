@@ -1,4 +1,3 @@
-// BurgerMenuStyles.ts
 import { createGlobalStyle } from "styled-components";
 import { colors } from "./theme";
 

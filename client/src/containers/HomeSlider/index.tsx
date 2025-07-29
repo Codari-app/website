@@ -18,7 +18,7 @@ export default function HomeSlider() {
   useEffect(() => {
     const handleResize = () => {
       if (swiperRef.current) {
-        swiperRef.current.update(); // Força recalcular dimensões
+        swiperRef.current.update();
       }
     };
 
