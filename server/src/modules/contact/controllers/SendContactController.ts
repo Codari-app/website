@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
 import { z } from "zod";
 import { SendContactUseCase } from "../useCases/SendContactUseCase";
-import { FakeMailService } from "../services/FakeMailService";
+import { NodemailerMailService } from "../services/NodemailerMailService.ts";
 
 export class SendContactController {
   async handle(req: Request, res: Response): Promise<Response> {
-    // Schema de validação
     const schema = z.object({
       name: z.string().min(1, "Name is required."),
       email: z.string().email("Invalid email format."),
@@ -17,7 +16,6 @@ export class SendContactController {
         ),
     });
 
-    // Validação
     const result = schema.safeParse(req.body);
 
     if (!result.success) {
@@ -35,14 +33,14 @@ export class SendContactController {
 
     const { name, email, phone } = result.data;
 
-    const mailService = new FakeMailService();
+    const mailService = new NodemailerMailService();
     const useCase = new SendContactUseCase(mailService);
 
     try {
       await useCase.execute({ name, email, phone });
       return res.status(200).json({ message: "Message sent successfully." });
     } catch (error: any) {
-      return res.status(500).json({ error: "Internal server error." });
+      return res.status(500).json({ error: "Internal server error." + error });
     }
   }
 }
