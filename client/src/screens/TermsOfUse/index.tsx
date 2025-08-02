@@ -107,7 +107,7 @@ export default function TermsOfUse() {
               conosco:
             </ContactText>
             <ContactText>
-              <strong>E-mail:</strong> termos@codariapp.tech
+              <strong>E-mail:</strong> termos@codariapp.com.br
             </ContactText>
             <ContactText>
               <strong>Telefone:</strong> (11) 99011-5235

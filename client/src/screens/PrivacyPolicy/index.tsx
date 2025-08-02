@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
               desejar exercer seus direitos, entre em contato conosco:
             </ContactText>
             <ContactText>
-              <strong>E-mail:</strong> privacidade@codariapp.tech
+              <strong>E-mail:</strong> privacidade@codariapp.com.br
             </ContactText>
             <ContactText>
               <strong>Telefone:</strong> (11) 99011-5235

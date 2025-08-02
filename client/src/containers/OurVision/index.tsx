@@ -15,10 +15,18 @@ export default function OurVision() {
         <Subtitle>Seu sucesso</Subtitle>
         <Title>Nossa visão</Title>
         <Paragraph width="70%">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id atque nam,
-          qui quis ab, ducimus eum pariatur labore commodi itaque, ipsum amet
-          quaerat dignissimos dolorum molestias perspiciatis repudiandae
-          explicabo aliquam!
+          Na Codari, acreditamos que o sucesso dos nossos clientes é o nosso
+          maior indicador de qualidade. É por isso que cada projeto é
+          desenvolvido com foco total em resultados reais, escalabilidade e
+          impacto positivo nos negócios.
+        </Paragraph>
+        <Paragraph width="70%">
+          Mais do que entregar software, queremos ser parte da sua trajetória de
+          crescimento. Trabalhamos lado a lado com você para entender seus
+          objetivos e transformar tecnologia em valor.
+        </Paragraph>
+        <Paragraph width="70%" highlight>
+          Seu sucesso nos inspira. Nossa visão é caminhar junto com você até lá.
         </Paragraph>
       </div>
     </Section>
