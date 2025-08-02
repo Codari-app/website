@@ -1,4 +1,3 @@
-import Button from "../../components/Button";
 import ImageShowcase from "../../components/ImageShowcase";
 import { Section } from "../../components/Section";
 import Spacer from "../../components/Spacer";
