@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import { useEffect, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { Background, Hero } from "./styles";
+import { scrollToSection } from "../../utils";
 
 export default function HomeSlider() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -52,7 +53,9 @@ export default function HomeSlider() {
           <div style={{ position: "relative", zIndex: 1 }}>
             <Hero>
               <h1>Criando o futuro, rompendo barreiras.</h1>
-              <Button fill>Começar agora</Button>
+              <Button onclick={() => scrollToSection("about")} fill>
+                Começar agora
+              </Button>
             </Hero>
           </div>
         </SwiperSlide>

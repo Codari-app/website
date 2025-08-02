@@ -28,7 +28,6 @@ export default function AboutUs() {
         </Paragraph>
         <Paragraph highlight>Seu projeto, do seu jeito, com a qualidade que você merece.</Paragraph>
         <Spacer size="30px" />
-        <Button fill>Saiba mais</Button>
       </div>
       <ImageShowcase />
     </Section>

@@ -4,6 +4,7 @@ import { HeaderContainer } from "./styles";
 import icon from "../../assets/icon.png";
 import Button from "../Button";
 import { useLocation, useNavigate } from "react-router-dom";
+import { scrollToSection } from "../../utils";
 
 export default function Header() {
   const location = useLocation();
@@ -88,14 +89,6 @@ export default function Header() {
         (window as Window).removeEventListener("scroll", handleScroll);
     }
   }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false);
-    }
-  };
 
   return (
     <HeaderContainer>
