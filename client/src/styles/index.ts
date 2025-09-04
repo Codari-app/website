@@ -1,20 +1,26 @@
 import { createGlobalStyle } from "styled-components";
-import { fontsSizes } from "./theme";
+import { fonts } from "./themes";
 
 export const GlobalStyles = createGlobalStyle`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
+ @font-face {
+    font-family: 'Bahnschrift';
+    src: url('../fonts/Bahnschrift.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
 
-    h1 {
-        font-size: ${fontsSizes.large};
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ${fonts.typography.primary};
+  }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+  ul {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
   }
 `;
