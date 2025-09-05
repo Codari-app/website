@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { fonts } from "./themes";
+import { colors, fonts } from "./themes";
 
 export const GlobalStyles = createGlobalStyle`
  @font-face {
@@ -22,5 +22,13 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  .special {
+    color: ${colors.brand.primary};
+  }
+
+  .special-secondary {
+    color: ${colors.brand.secondary};
   }
 `;

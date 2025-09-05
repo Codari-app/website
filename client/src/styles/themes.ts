@@ -1,7 +1,7 @@
 export const colors = {
   brand: {
-    primary: "#0001FB",
-    secondary: "#0162F5",
+    primary: "#0162F5",
+    secondary: "#71A9FF",
   },
   state: {
     info: "#2F80ED",
@@ -34,6 +34,8 @@ export const fonts = {
     small: "32px",
     medium: "40px",
     big: "48px",
-    large: "56px",
+    xxlarge: "56px",
+    xlarge: "70px",
+    large: "87px",
   },
 };
