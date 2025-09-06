@@ -8,14 +8,14 @@ export const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   border-radius: 21px;
-  border: 2px solid ${colors.black.white};
+  border: 2px solid ${colors.brand.white};
   padding: 31px 40px;
   backdrop-filter: blur(37.5px);
 
   ul {
     display: flex;
     align-items: center;
-    color: ${colors.black.white};
+    color: ${colors.brand.white};
     gap: 25px;
   }
 
@@ -40,8 +40,8 @@ export const HeaderStyles = styled.header`
 
     &:hover {
       background-color: ${colors.brand.primary};
-      color: ${colors.black.white};
-      outline: 2px solid ${colors.black.white};
+      color: ${colors.brand.white};
+      outline: 2px solid ${colors.brand.white};
     }
   }
 

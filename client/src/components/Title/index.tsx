@@ -3,10 +3,11 @@ import { TitleStyles } from "./styles";
 
 type TitleProps = {
   children: ReactNode;
+  variant: "blue" | "white";
 };
 
-function Title({ children }: TitleProps) {
-  return <TitleStyles>{children}</TitleStyles>;
+function Title({ children, variant }: TitleProps) {
+  return <TitleStyles $variant={variant}>{children}</TitleStyles>;
 }
 
 export default Title;

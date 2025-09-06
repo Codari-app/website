@@ -5,6 +5,11 @@ export const AboutStyles = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 200px;
+  }
+
 `;
 
 export const AboutContent = styled.div`
@@ -16,17 +21,19 @@ export const AboutContent = styled.div`
 `;
 
 export const Shapes = styled.div`
+  position: relative;
+
   svg {
     position: absolute;
-    top: 70%;
-    margin: 0 100px;
+    margin: 0 400px;
+    top: -200px;
 
     &#right {
-      left: 0;
+      right: 0;
     }
 
     &#left {
-      right: 0;
+      left: 0;
     }
   }
 

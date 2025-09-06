@@ -7,7 +7,7 @@ type ParagraphStylesProps = {
 }
 
 export const ParagraphStyles = styled.p<ParagraphStylesProps>`
-  color: ${colors.black.white};
+  color: ${colors.brand.white};
   text-align: center;
   margin: ${props => props.$margin || 0}px;
   font-size: ${fonts.sizes.xxsmall};

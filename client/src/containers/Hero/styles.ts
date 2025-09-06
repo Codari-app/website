@@ -8,7 +8,7 @@ export const HeroStyles = styled.section`
   align-items: center;
 
   h1 {
-    color: ${colors.black.white};
+    color: ${colors.brand.white};
     font-size: ${fonts.sizes.large};
     width: 50%;
     text-align: center;

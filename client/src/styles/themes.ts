@@ -2,6 +2,7 @@ export const colors = {
   brand: {
     primary: "#0162F5",
     secondary: "#71A9FF",
+    white: "#FFFFFF",
   },
   state: {
     info: "#2F80ED",
@@ -12,7 +13,6 @@ export const colors = {
     black1: "#000000",
     black2: "#1D1D1D",
     black3: "#282828",
-    white: "#FFFFFF",
   },
   grey: {
     gray1: "#333333",
