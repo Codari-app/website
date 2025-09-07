@@ -8,8 +8,8 @@ export const Gradient = styled.div`
   z-index: -2;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 45%,
-    ${colors.brand.primary} 70%,
+    rgba(0, 0, 0, 1) 30%,
+    ${colors.brand.primary} 50%,
     rgba(0, 0, 0, 1) 100%
   );
 

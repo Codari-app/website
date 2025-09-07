@@ -2,6 +2,7 @@ export const colors = {
   brand: {
     primary: "#0162F5",
     secondary: "#71A9FF",
+    terciary: "#0001FB",
     white: "#FFFFFF",
   },
   state: {
