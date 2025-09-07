@@ -1,4 +1,5 @@
 import BackgroundShape from "../../components/BackgroundShape";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import About from "../../containers/About";
 import Benefits from "../../containers/Benefits";
@@ -22,6 +23,7 @@ function Home() {
       <Divisor />
       <Partners />
       <Form />
+      <Footer />
     </Gradient>
   );
 }
