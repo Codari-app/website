@@ -2,9 +2,11 @@ import BackgroundShape from "../../components/BackgroundShape";
 import Header from "../../components/Header";
 import About from "../../containers/About";
 import Benefits from "../../containers/Benefits";
+import Cases from "../../containers/Cases";
 import Hero from "../../containers/Hero";
+import Partners from "../../containers/Partners";
 import Showcase from "../../containers/Showcase";
-import { Gradient } from "./styles";
+import { Divisor, Gradient } from "./styles";
 
 function Home() {
   return (
@@ -15,6 +17,9 @@ function Home() {
       <About />
       <Benefits />
       <Showcase />
+      <Cases />
+      <Divisor />
+      <Partners />
     </Gradient>
   );
 }

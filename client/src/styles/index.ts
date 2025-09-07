@@ -24,6 +24,17 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+    img {
+      -webkit-user-drag: none;
+      -moz-user-drag: none;
+      -ms-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      pointer-events: none;
+    }
+
   .special {
     color: ${colors.brand.primary};
   }

@@ -6,12 +6,11 @@ export const Gradient = styled.div`
   width: 100%;
   position: absolute;
   z-index: -2;
-
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 70%,
-    ${colors.brand.primary} 100%
+    rgba(0, 0, 0, 1) 45%,
+    ${colors.brand.primary} 70%,
+    rgba(0, 0, 0, 1) 100%
   );
 
   @media (max-width: 1024px) {
@@ -19,4 +18,11 @@ export const Gradient = styled.div`
       display: none;
     }
   }
+`;
+
+export const Divisor = styled.div`
+  width: 90%;
+  height: 5px;
+  background-color: ${colors.brand.primary};
+  margin: 80px auto;
 `;
