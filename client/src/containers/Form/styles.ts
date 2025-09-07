@@ -50,6 +50,11 @@ export const FormContainer = styled.div`
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
       width: 80vw;
+
+      button {
+        grid-column: 1 / -1;
+        width: 100%;
+      }
     }
   }
 
@@ -67,6 +72,10 @@ export const FormContainer = styled.div`
     &::placeholder {
       color: ${colors.grey.gray2};
       font-size: 16px;
+    }
+
+    @media (max-width: 320px) {
+      width: 100%;
     }
   }
 
@@ -88,4 +97,9 @@ export const FormTitle = styled.div`
   padding: 15px 0;
   font-size: ${fonts.sizes.xsmall};
   color: ${colors.brand.white};
+
+  h3 {
+    width: 50%;
+    margin: 0 auto;
+  }
 `;

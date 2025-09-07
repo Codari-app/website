@@ -15,4 +15,9 @@ export const ButtonStyles = styled.button`
     color: ${colors.brand.primary};
     border: 2px solid ${colors.brand.primary};
   }
+
+  @media (max-width: 320px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;

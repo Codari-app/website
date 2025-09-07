@@ -4,6 +4,10 @@ import { colors, fonts } from "../../styles/themes";
 export const FooterStyles = styled.footer`
   background-color: ${colors.brand.terciary};
   padding: 212px 65px 60px 65px;
+
+  & > svg {
+    width: 30px;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -16,7 +20,6 @@ export const FooterContent = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px;
     gap: 50px;
 
     h4 {

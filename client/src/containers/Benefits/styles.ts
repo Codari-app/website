@@ -34,6 +34,11 @@ export const BenefitsCardsTitle = styled.div`
     color: ${colors.brand.primary};
     font-size: 29px;
   }
+
+  @media (max-width: 320px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 export const BenefitsCards = styled.div`
@@ -45,7 +50,12 @@ export const BenefitsCards = styled.div`
 
   p {
     &:last-child {
-        margin-top: 20px;
+      margin-top: 20px;
     }
+  }
+
+  @media (max-width: 320px) {
+    width: 90%;
+    margin: 0 auto;
   }
 `;

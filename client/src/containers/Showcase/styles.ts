@@ -24,6 +24,11 @@ export const CardsContainer = styled.div`
 export const ShowcaseTitle = styled.h3`
   font-size: 27px;
   text-align: center;
+
+  @media (max-width: 320px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 export const Divisor = styled.div`
@@ -48,5 +53,6 @@ export const ShowcaseCard = styled.div`
 
   @media (max-width: 320px) {
     width: 80%;
+    margin: 0 auto;
   }
 `;

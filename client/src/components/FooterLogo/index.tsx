@@ -1,11 +1,10 @@
 function FooterLogo() {
   return (
     <svg
-      width="450"
-      height="138"
       viewBox="0 0 536 138"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", height: "auto", maxWidth: "450px" }}
     >
       <g clip-path="url(#clip0_118_959)">
         <path

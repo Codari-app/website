@@ -1,7 +1,7 @@
 const showcase = [
   {
     id: 1,
-    title: "Design Estratégico",
+    title: "Aplicativos (Mobile & Desktop)",
     description:
       "Criamos apps intuitivos e de alta performance para iOS, Android e desktop.",
   },
