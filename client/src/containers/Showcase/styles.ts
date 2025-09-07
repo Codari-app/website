@@ -35,7 +35,7 @@ export const Divisor = styled.div`
   height: 3px;
   width: 376px;
   background-color: ${colors.brand.white};
-  margin: 20px 0 15px 0;
+  margin: 20px auto 15px auto;
 `;
 
 export const ShowcaseCard = styled.div`
