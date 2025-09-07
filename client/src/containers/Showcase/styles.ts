@@ -45,4 +45,8 @@ export const ShowcaseCard = styled.div`
     width: 70%;
     text-align: center;
   }
+
+  @media (max-width: 320px) {
+    width: 80%;
+  }
 `;
