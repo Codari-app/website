@@ -35,7 +35,7 @@ export const BenefitsCardsTitle = styled.div`
     font-size: 29px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 90%;
     margin: 0 auto;
   }
@@ -54,7 +54,7 @@ export const BenefitsCards = styled.div`
     }
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 90%;
     margin: 0 auto;
   }

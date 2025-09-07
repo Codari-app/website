@@ -25,7 +25,7 @@ export const ShowcaseTitle = styled.h3`
   font-size: 27px;
   text-align: center;
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 80%;
     margin: 0 auto;
   }
@@ -51,7 +51,7 @@ export const ShowcaseCard = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 80%;
     margin: 0 auto;
   }

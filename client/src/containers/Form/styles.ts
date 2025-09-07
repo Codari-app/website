@@ -74,7 +74,7 @@ export const FormContainer = styled.div`
       font-size: 16px;
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: 768px) {
       width: 100%;
     }
   }

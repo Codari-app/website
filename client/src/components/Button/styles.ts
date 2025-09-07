@@ -16,7 +16,7 @@ export const ButtonStyles = styled.button`
     border: 2px solid ${colors.brand.primary};
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 90%;
     margin: 0 auto;
   }
