@@ -7,7 +7,7 @@ import { CaseCard, CaseDescription, CasesStyles } from "./styles";
 
 function Cases() {
   return (
-    <CasesStyles>
+    <CasesStyles id="cases">
       <Title variant="white">Cases Codari</Title>
 
       <Swiper

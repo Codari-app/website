@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styles/themes";
 
-export const CasesStyles = styled.div`
+export const CasesStyles = styled.section`
   margin-top: 250px;
   display: flex;
   flex-direction: column;

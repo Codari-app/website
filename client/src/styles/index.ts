@@ -16,6 +16,15 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${fonts.typography.primary};
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${colors.brand.white};
+  }
+
   ul {
     list-style: none;
   }

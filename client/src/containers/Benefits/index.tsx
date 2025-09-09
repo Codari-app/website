@@ -2,6 +2,7 @@ import Button from "../../components/Button";
 import Paragraph from "../../components/Paragraph";
 import Title from "../../components/Title";
 import benefits from "../../data/benefits";
+import scrollToSection from "../../utils/scrollToSection";
 import {
   BenefitsCards,
   BenefitsCardsContainer,
@@ -11,7 +12,7 @@ import {
 
 function Benefits() {
   return (
-    <BenefitsStyles>
+    <BenefitsStyles id="differences">
       <Title variant="blue">Por que escolher a Codari?</Title>
       <Paragraph width={30} margin={68}>
         Nossa <span className="special-secondary">abordagem</span> une{" "}
@@ -33,7 +34,7 @@ function Benefits() {
           </div>
         ))}
       </BenefitsCardsContainer>
-      <Button>Converse com nosso time!</Button>
+      <Button onClick={() => scrollToSection("contact")}>Converse com nosso time!</Button>
     </BenefitsStyles>
   );
 }

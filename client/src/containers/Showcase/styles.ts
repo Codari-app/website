@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styles/themes";
 
-export const ShowcaseStyles = styled.div`
+export const ShowcaseStyles = styled.section`
   margin-top: 250px;
   display: flex;
   flex-direction: column;

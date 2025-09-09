@@ -5,7 +5,7 @@ import { FormContainer, FormStyles, FormTitle } from "./styles";
 
 function Form() {
   return (
-    <FormStyles>
+    <FormStyles id="contact">
       <Title variant="white">Pronto para começar sua jornada digital?</Title>
       <Paragraph width={30} margin={83}>
         Fale conosco e descubra como a Codari pode transformar sua ideia em um
@@ -27,8 +27,16 @@ function Form() {
           <button>Vamos construir juntos!</button>
         </form>
       </FormContainer>
-      <Paragraph width={100} margin={0}>Ou se preferir:</Paragraph>
-      <Button>Agende uma reunião!</Button>
+      <Paragraph width={100} margin={0}>
+        Ou se preferir:
+      </Paragraph>
+      <Button
+        onClick={() =>
+          window.open(`${import.meta.env.VITE_WHATSAPP}`, "_blank")
+        }
+      >
+        Agende uma reunião!
+      </Button>
     </FormStyles>
   );
 }

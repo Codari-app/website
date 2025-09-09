@@ -6,7 +6,7 @@ import { AboutContent, AboutStyles, Shapes } from "./styles";
 
 function About() {
   return (
-    <AboutStyles>
+    <AboutStyles id="about">
       <Title variant="blue">Da ideia à realidade digital.</Title>
       <Shapes>
         <AboutShapeRight />

@@ -8,6 +8,11 @@ export const FooterStyles = styled.footer`
   & > svg {
     width: 30px;
   }
+
+  li {
+    cursor: pointer;
+    margin: 10px 0;
+  }
 `;
 
 export const FooterContent = styled.div`

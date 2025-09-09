@@ -1,11 +1,12 @@
 import Button from "../../components/Button";
 import CodariLogo from "../../components/CodariLogo";
 import Title from "../../components/Title";
+import scrollToSection from "../../utils/scrollToSection";
 import { PartnersContainer, PartnersStyles } from "./styles";
 
 function Partners() {
   return (
-    <PartnersStyles>
+    <PartnersStyles id="partners">
       <Title variant="white">
         <span className="special">Negócios</span> que{" "}
         <span className="special">confiam</span> em{" "}
@@ -16,7 +17,7 @@ function Partners() {
           <CodariLogo key={i} />
         ))}
       </PartnersContainer>
-      <Button>Seja um parceiro também!</Button>
+      <Button onClick={() => scrollToSection("contact")}>Seja um parceiro também!</Button>
     </PartnersStyles>
   );
 }
