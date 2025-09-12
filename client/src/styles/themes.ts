@@ -9,6 +9,7 @@ export const colors = {
     info: "#2F80ED",
     success: "#27AE60",
     warning: "#E2B93B",
+    error: "#EB5757",
   },
   black: {
     black1: "#000000",

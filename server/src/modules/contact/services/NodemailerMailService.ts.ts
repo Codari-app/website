@@ -5,6 +5,7 @@ interface ContactData {
   name: string;
   email: string;
   phone: string;
+  message: string;
 }
 
 export class NodemailerMailService implements IMailService {
@@ -12,7 +13,7 @@ export class NodemailerMailService implements IMailService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "smtp.zoho.com",
       port: 465,
       secure: true,
       auth: {
@@ -25,7 +26,7 @@ export class NodemailerMailService implements IMailService {
     });
   }
 
-  async sendContact({ name, email, phone }: ContactData): Promise<void> {
+  async sendContact({ name, email, phone, message }: ContactData): Promise<void> {
     const mailOptions = {
       from: `"Contato do Site" <${email}>`,
       to: process.env.SMTP_USER,
@@ -42,6 +43,7 @@ export class NodemailerMailService implements IMailService {
         <p><strong>Nome:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Telefone:</strong> ${phone}</p>
+        <p><strong>Mensagem:</strong> ${message}</p>
       `,
     };
 

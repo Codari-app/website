@@ -41,10 +41,16 @@ export const FormContainer = styled.div`
       color: ${colors.brand.white};
       transition: 0.3s;
       padding: 15px 0;
+      align-self: start;
 
       &:hover {
         opacity: 0.8;
       }
+    }
+
+    .error {
+      width: 80%;
+      color: ${colors.state.error};
     }
 
     @media (max-width: 768px) {

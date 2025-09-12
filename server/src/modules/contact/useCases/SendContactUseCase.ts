@@ -5,12 +5,12 @@ export class SendContactUseCase {
   constructor(private mailService: IMailService) {}
 
   async execute(data: SendContactDTO): Promise<void> {
-    const { name, email, phone } = data;
+    const { name, email, phone, message } = data;
 
-    if (!name || !email || !phone) {
+    if (!name || !email || !phone || !message) {
       throw new Error("Todos os campos são obrigatórios.");
     }
 
-    await this.mailService.sendContact({ name, email, phone });
+    await this.mailService.sendContact({ name, email, phone, message });
   }
 }

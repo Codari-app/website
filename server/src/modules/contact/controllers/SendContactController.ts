@@ -6,7 +6,7 @@ import { NodemailerMailService } from "../services/NodemailerMailService.ts";
 export class SendContactController {
   async handle(req: Request, res: Response): Promise<Response> {
     const schema = z.object({
-      name: z.string().min(1, "Name is required."),
+      name: z.string().min(2, "Name is required."),
       email: z.string().email("Invalid email format."),
       phone: z
         .string()
@@ -14,6 +14,7 @@ export class SendContactController {
           /^\(\d{2}\)\s\d{5}-\d{4}$/,
           "Phone must be in the format (99) 99999-9999."
         ),
+      message: z.string().min(10),
     });
 
     const result = schema.safeParse(req.body);
@@ -31,13 +32,13 @@ export class SendContactController {
       });
     }
 
-    const { name, email, phone } = result.data;
+    const { name, email, phone, message } = result.data;
 
     const mailService = new NodemailerMailService();
     const useCase = new SendContactUseCase(mailService);
 
     try {
-      await useCase.execute({ name, email, phone });
+      await useCase.execute({ name, email, phone, message });
       return res.status(200).json({ message: "Message sent successfully." });
     } catch (error: any) {
       return res.status(500).json({ error: "Internal server error." + error });
