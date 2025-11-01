@@ -90,9 +90,6 @@ function Form() {
           {error && <p className="error">{error}</p>}
         </form>
       </FormContainer>
-      <Paragraph width={100} margin={0}>
-        Ou se preferir:
-      </Paragraph>
     </FormStyles>
   );
 }
