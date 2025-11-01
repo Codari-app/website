@@ -2,7 +2,6 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { IMaskInput } from "react-imask";
-import Button from "../../components/Button";
 import Paragraph from "../../components/Paragraph";
 import Title from "../../components/Title";
 import { FormContainer, FormStyles, FormTitle } from "./styles";
@@ -94,13 +93,6 @@ function Form() {
       <Paragraph width={100} margin={0}>
         Ou se preferir:
       </Paragraph>
-      <Button
-        onClick={() =>
-          window.open(`${import.meta.env.VITE_WHATSAPP}`, "_blank")
-        }
-      >
-        Agende uma reunião!
-      </Button>
     </FormStyles>
   );
 }

@@ -1,6 +1,6 @@
 import FooterLogo from "../FooterLogo";
 import { FooterContent, FooterStyles, Social, SocialSquare } from "./styles";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -8,7 +8,6 @@ function Footer() {
       <FooterContent>
         <FooterLogo />
         <div>
-          <p>{import.meta.env.VITE_PHONE}</p>
           <p>{import.meta.env.VITE_EMAIL}</p>
           <Social>
             <SocialSquare
@@ -17,13 +16,6 @@ function Footer() {
               }
             >
               <FaInstagram />
-            </SocialSquare>
-            <SocialSquare
-              onClick={() =>
-                window.open(`${import.meta.env.VITE_WHATSAPP}`, "_blank")
-              }
-            >
-              <FaWhatsapp />
             </SocialSquare>
           </Social>
         </div>
